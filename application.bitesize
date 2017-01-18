@@ -1,0 +1,12 @@
+project: thilina-dev
+applications:
+  - name: docs-app
+    runtime: ubuntu-httpdfcgi:1.3
+    version: "0.8.35"
+    dependencies:
+      - name: docswebsite
+        type: debian-package
+        origin:
+          build: docs-app
+        version: 1.0
+    command: "/var/run.sh"

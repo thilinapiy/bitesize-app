@@ -1,0 +1,24 @@
+project: thilina-dev
+environments:
+  - name: production
+    namespace: thilina-dev
+    deployment:
+      method: rolling-upgrade
+    services:
+      - name: docs-app
+        external_url: thilina.dev-bite.io
+        port: 80 # this is the port number the application responds on in each container/instance/pod
+        ssl: "true"
+        replicas: 2
+      - type: mysql
+        name: kubeconrds
+        version: 5.6
+      - type: mongo
+        name: kubeconmongo
+        version: 2.6
+    tests:
+      - name: docs site tests
+        repository: git@github.com:pearsontechnology/kubecon_docs_tests.git
+        branch: master
+        commands:
+          - shell: ./tests.sh
