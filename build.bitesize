@@ -3,7 +3,7 @@ project: thilina-dev
 components:
   - name: docs-app
     os: linux
-    build:
-      - shell: go get github.com/thilinapiy/goecho
-    artifacts:
-      - location: "/go/bin/goecho"
+   dependencies:
+      - type: gem-package
+        package: go get github.com/thilinapiy/goecho
+
