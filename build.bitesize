@@ -3,33 +3,7 @@ project: thilina-dev
 components:
   - name: docs-app
     os: linux
-    dependencies:
-      - type: debian-package
-        package: nodejs
-      - type: debian-package
-        package: npm
-      - type: gem-package
-        package: fpm
-    repository:
-      git: git@github.com:piyumiR/hello-world.git
-      branch: master
-    env:
-      - name: GIT_USERNAME
-        value: user
-      - name: GIT_PASSWORD
-        value: password
     build:
-      - shell: sudo mkdir -p /var/www
-      - shell: sudo cp run.sh /var/www
-      - shell: sudo apt-get install -y nodejs
-      - shell: pwd
-      - shell: ls
-      - shell: sudo chmod 744 /var
-      - shell: sudo cp -R * /var/www
-      - shell: sudo chmod 744 /var/www/run.sh
-      - shell: sudo gem install bundler
-      - shell: sudo gem cleanup
-      - shell: sudo gem install fpm
-      - shell: fpm -s dir -n docswebsite --iteration $(date "+%Y%m%d%H%M%S") -t deb /var
+      - shell: go get github.com/thilinapiy/goecho
     artifacts:
-      - location: "*.deb"
+      - location: "/go/bin/goecho"
