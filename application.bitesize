@@ -1,13 +1,13 @@
 project: thilina-dev
 applications:
-  - name: doc-app
+  - name: node-app
     runtime: ubuntu-nodejs5x:1.2
     version: "0.8.35"
     dependencies:
-      - name: doc-app 
+      - name: node-app 
         type: debian-package
         origin:
-          build: doc-app
+          build: node-app
         version: 1.0
     command: "npm start"    
     

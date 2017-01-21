@@ -1,7 +1,7 @@
 # see https://mycloud.atlassian.net/wiki/display/BITE/Jenkins
 project: thilina-dev
 components:
-  - name: doc-app
+  - name: node-app
     os: linux
     dependencies:
       - type: debian-package
@@ -12,6 +12,6 @@ components:
     build:
       - shell: sudo mkdir -p /app
       - shell: sudo cp -rf * /app
-      - shell: sudo /usr/local/bin/fpm -s dir -n doc-app --iteration $(date "+%Y%m%d%H%M%S") -t deb /app
+      - shell: sudo /usr/local/bin/fpm -s dir -n node-app --iteration $(date "+%Y%m%d%H%M%S") -t deb /app
     artifacts:
       - location: "*.deb"
