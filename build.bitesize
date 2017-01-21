@@ -10,8 +10,8 @@ components:
       git: git@github.com:geethaka/nodejsdemo.git
       branch: master
     build:
-      - shell: mkdir -p ~/app
-      - shell: cp -rf * ~/app
-      - shell: fpm -s dir -n doc-app --iteration $(date "+%Y%m%d%H%M%S") -t deb ~/app
+      - shell: sudo mkdir -p /app
+      - shell: sudo cp -rf * /app
+      - shell: sudo fpm -s dir -n doc-app --iteration $(date "+%Y%m%d%H%M%S") -t deb /app
     artifacts:
       - location: "*.deb"
