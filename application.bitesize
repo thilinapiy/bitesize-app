@@ -1,12 +1,13 @@
-project: thilina-dev
+project: kasun-dev
 applications:
-  - name: docs-app
-    runtime: golang:latest
-    version: "1.0.0"
+  - name: nodedemo-app
+    runtime: ubuntu-nodejs5x:1.2
+    version: "0.8.35"
     dependencies:
-      - name: build-dep
+      - name: nodedemoapp
         type: debian-package
         origin:
-          build: docs-app
+          build: nodedemo-app
         version: 1.0
-    command: "/go/bin/goecho"
+    command: "npm start"    
+    

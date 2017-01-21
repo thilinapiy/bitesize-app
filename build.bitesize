@@ -1,9 +1,16 @@
 # see https://mycloud.atlassian.net/wiki/display/BITE/Jenkins
-project: thilina-dev
+project: kasun-dev
 components:
-  - name: docs-app
+  - name: nodedemo-app
     os: linux
-   dependencies:
-      - type: gem-package
-        package: go get github.com/thilinapiy/goecho
-
+    dependencies:
+      - type: debian-package
+        package: nodejs
+    repository:
+      git: git@github.com:geethaka/nodejsdemo.git
+      branch: master
+    build:
+      - shell: cp -rf * /app
+      - shell: fpm -s dir -n nodedemoapp --iteration $(date "+%Y%m%d%H%M%S") -t deb /app
+    artifacts:
+      - location: "*.deb"
