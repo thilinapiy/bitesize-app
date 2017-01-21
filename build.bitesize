@@ -12,7 +12,7 @@ components:
     build:
       - shell: sudo mkdir -p /app
       - shell: sudo cp -rf * /app
-      - shell: FMP=`which fmp` 
+      - shell: FPM=`which fpm` 
       - shell: sudo ${FPM} -s dir -n doc-app --iteration $(date "+%Y%m%d%H%M%S") -t deb /app
     artifacts:
       - location: "*.deb"
