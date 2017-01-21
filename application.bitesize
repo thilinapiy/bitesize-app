@@ -4,7 +4,7 @@ applications:
     runtime: ubuntu-nodejs5x:1.2
     version: "0.8.35"
     dependencies:
-      - name: nodedemoapp
+      - name: doc-app 
         type: debian-package
         origin:
           build: doc-app

@@ -12,6 +12,6 @@ components:
     build:
       - shell: mkdir -p /app
       - shell: cp -rf * /app
-      - shell: fpm -s dir -n nodedemoapp --iteration $(date "+%Y%m%d%H%M%S") -t deb /app
+      - shell: fpm -s dir -n doc-app --iteration $(date "+%Y%m%d%H%M%S") -t deb /app
     artifacts:
       - location: "*.deb"
