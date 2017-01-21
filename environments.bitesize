@@ -6,7 +6,8 @@ environments:
       method: rolling-upgrade
     services:
       - name: doc-app
-        external_url: thilina.dev-bite.io
+        #external_url: thilina.dev-bite.io
+        external_url: thilina.prsn-dev.io
         port: 80 # this is the port number the application responds on in each container/instance/pod
         ssl: "false"
         replicas: 2
