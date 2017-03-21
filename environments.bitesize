@@ -14,6 +14,8 @@ environments:
         ssl: "false"
         replicas: 2
         env:
+          - name: test
+            value: testval
           - secret: CONSUL_TOKEN
             value: consul-coco-dev-write
           - name: CONSUL_HOST
