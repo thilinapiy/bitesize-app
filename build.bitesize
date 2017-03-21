@@ -1,5 +1,4 @@
-# see https://mycloud.atlassian.net/wiki/display/BITE/Jenkins
-project: thilina-dev
+project: thilina
 components:
   - name: node-app
     os: linux
