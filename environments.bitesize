@@ -1,7 +1,7 @@
-project: thilina
+project: projectx
 environments:
   - name: Development
-    namespace: thilina-dev
+    namespace: projectx-dev
     deployment:
       method: rolling-upgrade
     services:
@@ -9,7 +9,7 @@ environments:
         name: mongodb
         version: 2.6
       - name: node-app
-        external_url: thilina.prsn-dev.io
+        external_url: projectx.prsn-dev.io
         port: 80 
         ssl: "false"
         replicas: 2

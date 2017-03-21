@@ -1,4 +1,4 @@
-project: thilina
+project: projectx 
 components:
   - name: node-app
     os: linux
