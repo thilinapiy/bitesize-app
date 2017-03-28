@@ -1,16 +1,15 @@
-project: projectx 
+project: sample
 components:
-  - name: node-app
+  - name: spring-app
     os: linux
-    dependencies:
-      - type: debian-package
-        package: nodejs
     repository:
-      git: git@github.com:geethaka/nodejsdemo.git
-      branch: master
+      git: git@github.com:thilinapiy/bitesize-sample-apps.git
+      branch: springapp1-v2.0.10
     build:
-      - shell: sudo mkdir -p /app
-      - shell: sudo cp -rf * /app
-      - shell: sudo /usr/local/bin/fpm -s dir -n node-app --iteration $(date "+%Y%m%d%H%M%S") -t deb /app
+      - shell: mkdir -p /app
+      - shell: mvn clean package
+      - shell: cp -rf target/*.jar /app
+      - shell: /usr/local/bin/fpm -s dir -n spring-app --iteration $(date "+%Y%m%d%H%M%S") -t deb /app
     artifacts:
       - location: "*.deb"
+

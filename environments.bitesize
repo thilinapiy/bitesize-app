@@ -1,25 +1,13 @@
-project: projectx
+project: sample
 environments:
   - name: Development
-    namespace: projectx-dev
+    namespace: sample-dev
     deployment:
       method: rolling-upgrade
     services:
-      - type: mongo
-        name: mongodb
-        version: 2.6
-      - name: node-app
-        external_url: projectx.prsn-dev.io
-        port: 80 
+      - name: spring-app
+        external_url: hellobite-sample.dev-bite.io
+        port: 8080 
         ssl: "false"
-        replicas: 2
-        env:
-          - name: test
-            value: testval
-          - secret: CONSUL_TOKEN
-            value: consul-coco-dev-write
-          - name: CONSUL_HOST
-            value: "consul.kube-system.svc.cluster.local"
-          - name: CONSUL_PORT
-            value: "8500"
+        replicas: 1
 
