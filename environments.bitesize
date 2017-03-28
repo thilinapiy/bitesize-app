@@ -6,8 +6,13 @@ environments:
       method: rolling-upgrade
     services:
       - name: spring-app
-        external_url: hellobite-sample.dev-bite.io
+        external_url: spring-sample.dev-bite.io
         port: 8080 
+        ssl: "false"
+        replicas: 1
+      - name: node-app
+        external_url: nodejs-sample.dev-bite.io
+        port: 80
         ssl: "false"
         replicas: 1
 
