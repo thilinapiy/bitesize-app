@@ -5,13 +5,8 @@ environments:
     deployment:
       method: rolling-upgrade
     services:
-      - name: node-app
-        external_url: nodejs-sample.dev-bite.io
-        port: 80
+      - name: spring-app
+        external_url: hellobite-sample.dev-bite.io
+        port: 8080
         ssl: "false"
         replicas: 1
-        volumes:
-          - name: nfs-sample-dev-data
-            path: /data
-            modes: ReadWriteMany
-            size: 10G
