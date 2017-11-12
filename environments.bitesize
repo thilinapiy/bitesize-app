@@ -1,12 +1,12 @@
-project: tikky
+project: thilina
 environments:
   - name: Development
-    namespace: tikky-dev
+    namespace: thilina-dev
     deployment:
       method: rolling-upgrade
     services:
       - name: spring-app
-        external_url: hello-tikky.dev-bite.io
+        external_url: hello-thilina.bst.prsn-dev.io
         port: 8080
         ssl: "false"
         replicas: 1

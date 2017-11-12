@@ -1,4 +1,4 @@
-project: tikky
+project: thilina
 applications:
   - name: spring-app
     runtime: ubuntu-jdk8:1.0

@@ -1,4 +1,4 @@
-project: tikky
+project: thilina
 components:
   - name: spring-app
     os: linux
