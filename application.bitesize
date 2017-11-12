@@ -1,4 +1,4 @@
-project: sample
+project: tikky
 applications:
   - name: spring-app
     runtime: ubuntu-jdk8:1.0
