@@ -6,7 +6,7 @@ environments:
       method: rolling-upgrade
     services:
       - name: spring-app
-        external_url: hellobite-sample.dev-bite.io
+        external_url: hello-tikky.dev-bite.io
         port: 8080
         ssl: "false"
         replicas: 1
