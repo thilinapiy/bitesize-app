@@ -1,7 +1,7 @@
 project: tikky
 environments:
   - name: Development
-    namespace: sample-dev
+    namespace: tikky-dev
     deployment:
       method: rolling-upgrade
     services:
